@@ -1,0 +1,289 @@
+html {
+    font-size: 16px;
+    color: #333536;
+}
+
+body {
+    font-family: "Roboto", Sans-serif;
+    background-color: white;
+    text-align: center;
+    line-height: 1;
+}
+
+p {
+    padding: 0 1rem;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin: 1rem 0;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin: 0.5rem 0;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0.5rem 0;
+}
+
+h4 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 0.5rem 0;
+    color: black;
+}
+
+h5 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+img {
+    display: block;
+}
+
+.main {
+    position: relative;
+    top: 4rem; /*to compensate fixed header */
+    background-color: #f3f3f3;
+}
+
+/* Header section */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    border-bottom: solid 1px lightgray;
+    z-index: 10;
+}   
+
+.header .content {
+    display: flex;
+    padding: 0 2rem;
+    height: 4rem;
+    align-items: center;
+}
+
+.header .mobile {
+    display: none;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    flex: 1;
+    text-align: left;
+}
+
+.header ul {
+    display: flex;
+}
+
+.header li {
+    padding-left: 2.5rem;
+}
+
+/* Banner section */
+#banner {
+    background-image: url("../images/0_taranaki.jpg");
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: 50% 65%;
+    background-size: cover;
+    height: 35rem;
+    text-align: center;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+#banner .content {
+    background-color: #ffffff90;
+    padding: 0 4rem;
+    width: 100%;
+}
+
+/* Portfolio section */
+#portfolio {
+    display: block;
+    padding: 2rem;
+}
+.trips {
+    display: flex;
+    justify-content: center;
+    align-items: space-between;
+    flex-wrap: wrap;
+}
+
+.trip-container {
+    flex-basis: 20rem;
+    padding: 1rem;
+    margin: 0.5vw 1vw 1vw;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#portfolio img {
+    width: 20rem;
+    height: 12rem;
+}
+
+/* Team section */
+#team-container {
+    display: block;
+    padding: 1rem;
+    background-color: white;
+}
+
+.guides {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.guide {
+    flex: 1;
+    margin: 1rem 2%;
+    width: 30%;
+    max-width: 20rem;
+    
+}
+
+.guide img {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Contact details */
+#contact {
+    padding: 1.5rem;
+    line-height: 1.5;
+}
+
+/* copyright */
+.copyright {
+    display: block;
+    padding: 1rem;
+    color: gray;
+}
+
+@media only screen and (min-width: 1400px) {
+    #banner {
+        background-position: top -400px right 50%;
+    }    
+}
+
+@media only screen and (max-width: 1210px) {
+    #portfolio {
+        padding: 2vw;
+    }
+
+    .trip-container .img-container {
+        width: 40vw;
+        height: 24vw;
+        overflow: hidden;
+    }   
+
+    #portfolio img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 790px) {
+    h1 {
+        font-size: 3rem;
+        font-weight: 500;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    h4 {
+        font-size: 1.2rem;
+    }
+
+    #banner {
+        background-position: 50% 80%;
+        height: 25rem;
+        
+    }
+    
+    #banner .content {
+        padding: 0 1.5rem;
+    }
+
+    .trip-container .img-container {
+        width: 80vw;
+        height: 48vw;
+    } 
+    .guide {
+        margin: 0;
+    }
+    #team-container {
+        padding: 1rem 0;
+    }
+}
+@media only screen and (max-width: 490px) {
+    h1 {
+        font-size: 2.2rem;
+        margin: 0.5rem 0;
+    }
+    
+    h2 {
+        font-size: 1.7rem; 
+    }
+    
+    h4 {
+        font-size: 1rem;
+    }
+
+    .header .desktop {
+        display: none;
+    }
+
+    .header .mobile {
+        display: flex;
+        height: 3rem;
+    }
+
+    .header .mobile li {
+        padding-left: 6vw;
+    }
+
+    .main {
+        top: 3rem;
+    }
+    
+    #banner {
+        height: 20rem;
+        background-position: 50% 100%;
+    }
+
+    #banner .content {
+        padding: 0 0.5rem;
+    }
+
+    .guides {
+        flex-flow: column;
+        align-items: center;
+        padding: 0;
+
+    }
+
+    .guide {
+        width: auto;
+        margin: 1rem;
+    }
+}
+
